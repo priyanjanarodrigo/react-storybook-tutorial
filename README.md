@@ -1,4 +1,4 @@
-# Storybook Crash Course
+# React Storybook Crash Course
 
 ## Initializaing and running a storybook
 
@@ -36,7 +36,7 @@
 
 6. By default there can be some storybooks generated such as `Introduction`, `Header`, `Page` and some component specific ones (if auto detected) within the `stories` directory. We can customize this directory as needed. Also it is recommended to put all the component specific storybooks inside `stories` directory. Folloeing figures represent the set of auto-generated stories initially (These were removed and customized the `stories` directory from the scratch later on) and initial view when the storybook was run.
 
-<div style="text-align: center;">
+<div>
     <img src="./public/images/react-storybook-initial-stage.png"
     style ="height:800px; margin-top:30px;">
     <img src="./public/images/storybook-initial-view.png"
