@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Storybook Crash Course
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Initializaing and running a storybook
 
-## Available Scripts
+ 
+1.  First of all create the react application (ex: `npx create-react-app react-storybook-tutorial --template typescript`)
 
-In the project directory, you can run:
 
-### `npm start`
+2. Then, navigate to the root directory with CLI and execute following command to initialize the storybook 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ```
+    npx storybook init
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    Or we can use shorthand code(`sb` stands for storybook).
 
-### `npm test`
+    ```
+    npx sb init
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+3. The above command execution will doenload all the storybook information into our application. The important thing is that we need to do this after initializing the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Initializing a storybook will create two new directories within the project.
+    
+    **4.1 `storybook`** : Contains two files. Those are `main.js` (which is like a config file) and `preview.js` (which allows us to set different global configurations)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    **4.2 `stories`** : This is where all the storybook related code is added.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Also, there will be some scripts added in `package.json` and an important one is `"storybook": "start-storybook -p 6006 -s public"`. With that we can start the storybook by executing the following command. (storybook will run on port 6006 as specified above).
+    ```
+    npm run storybook
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. By default there can be some storybooks generated such as `Introduction`, `Header`, `Page` and some component specific ones (if auto detected) within the `stories` directory. We can customize this directory as needed. Also it is recommended to put all the component specific storybooks inside `stories` directory. Folloeing figures represent the set of auto-generated stories initially (These were removed and customized the `stories` directory from the scratch later on) and initial view when the storybook was run.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<div style="text-align: center;">
+    <img src="./public/images/react-storybook-initial-stage.png"
+    style ="height:800px; margin-top:30px;">
+    <img src="./public/images/storybook-initial-view.png"
+    style =" margin-top:30px;">
+</div>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## References
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React Storybook Crash Course (by WebDev Simplified): https://www.youtube.com/watch?v=FUKpWgRyPlU
