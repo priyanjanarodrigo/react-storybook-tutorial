@@ -7,7 +7,7 @@ export default {
     argTypes: {
         /**
          * This numberOfChilren is an additional arguments which is specific to the storybook and the component is not
-         * having such an argument and not needed anywhere within the component. It is only needed for the storybook.
+         * having such an argument/prop and not needed anywhere within the component. It is only needed for the storybook.
          */
         numberOfChildren: { type: "number", defaultValue: 4 }
     }
